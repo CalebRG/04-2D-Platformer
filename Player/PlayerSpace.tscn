@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player/PlayerSpace.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Old hero.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 160, 640, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 320, 640, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 640, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 640, 640, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 800, 640, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 960, 640, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "Moving",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 10, 24.4201 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 512, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Thrust" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 50 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1.467, 6.726 )
+rotation = -1.56381
+scale = Vector2( 0.347, 0.347 )
+frames = SubResource( 11 )
+animation = "Moving"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.235962, 6.13516 )
+shape = SubResource( 18 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

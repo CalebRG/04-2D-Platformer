@@ -1,0 +1,325 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Player/PlayerSpace.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/spacebackground.jpg" type="Texture" id=3]
+[ext_resource path="res://Enemy/EnemySpace.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/04B_30__.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/balloon.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Balloons Sprites.png" type="Texture" id=7]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SoundFX/space.mp3" type="AudioStream" id=9]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 29.5767, 100.985 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4663.89, 79.2092 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="background"]
+position = Vector2( 744.188, -305.047 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite2" type="Sprite" parent="background"]
+position = Vector2( 744.188, -1323.01 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite3" type="Sprite" parent="background"]
+position = Vector2( 744.188, -2369.51 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite4" type="Sprite" parent="background"]
+position = Vector2( 769.086, -3489.07 )
+scale = Vector2( 0.949994, 1.58584 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite5" type="Sprite" parent="background"]
+position = Vector2( 744.188, -4412.25 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite6" type="Sprite" parent="background"]
+position = Vector2( -416.478, -305.047 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite7" type="Sprite" parent="background"]
+position = Vector2( -416.478, -1323.01 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite8" type="Sprite" parent="background"]
+position = Vector2( -416.478, -2369.51 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite9" type="Sprite" parent="background"]
+position = Vector2( -391.58, -3489.07 )
+scale = Vector2( 0.949994, 1.58584 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite10" type="Sprite" parent="background"]
+position = Vector2( -412.478, -4412.25 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite19" type="Sprite" parent="background"]
+position = Vector2( -380.478, -5484.25 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite11" type="Sprite" parent="background"]
+position = Vector2( 1915, -308.61 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite16" type="Sprite" parent="background"]
+position = Vector2( 745.727, 730.789 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite20" type="Sprite" parent="background"]
+position = Vector2( -214.273, 738.789 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite21" type="Sprite" parent="background"]
+position = Vector2( 1881.73, 726.789 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite17" type="Sprite" parent="background"]
+position = Vector2( 745.727, -5430.83 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite22" type="Sprite" parent="background"]
+position = Vector2( 745.727, -6515.72 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite23" type="Sprite" parent="background"]
+position = Vector2( -364.59, -6566.58 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite24" type="Sprite" parent="background"]
+position = Vector2( 1839.09, -6545.39 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite12" type="Sprite" parent="background"]
+position = Vector2( 1903.69, -1314.53 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite13" type="Sprite" parent="background"]
+position = Vector2( 1882.5, -2350.44 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite14" type="Sprite" parent="background"]
+position = Vector2( 1939.18, -3486.95 )
+scale = Vector2( 0.949994, 1.58584 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite15" type="Sprite" parent="background"]
+position = Vector2( 1885.07, -4405.52 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="Sprite18" type="Sprite" parent="background"]
+position = Vector2( 1893.07, -5449.52 )
+scale = Vector2( 0.922008, 1.53912 )
+texture = ExtResource( 3 )
+offset = Vector2( -249.678, 463.233 )
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 500.888, 531.76 )
+collision_layer = 4
+acceleration = 0.05
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 544.693, -4810.96 )
+collision_layer = 0
+collision_mask = 4
+
+[node name="Balloons Sprites" type="Sprite" parent="Area2D"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 483.573, 675.128 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 483.573, -5368.42 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -69.9702, -956.023 )
+rotation = 1.57603
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1069.63, -956.023 )
+rotation = 1.57603
+shape = SubResource( 1 )
+
+[node name="Bullets" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 151.069, 76.5294 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 676.758, -456.379 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 203.31, -931.204 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 602.061, -1783.2 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 323.135, -2198.57 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 754.257, -2758.18 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 164.614, -3040.41 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 769.376, -3483.9 )
+scale = Vector2( 2, 2 )
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 139.416, -3559.49 )
+scale = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 286.87
+margin_top = 272.6
+margin_right = 749.87
+margin_bottom = 349.6
+custom_fonts/font = SubResource( 2 )
+text = "FLY UP AND GET YOUR BALLOON!
+WATCH OUT FOR UFOS!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Coin2" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 373.395, -86.8231 )
+
+[node name="Coin3" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 605.657, -247.004 )
+
+[node name="Coin4" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 863.281, -471.257 )
+
+[node name="Coin5" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 102.422, -596.732 )
+
+[node name="Coin6" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 486.856, -974.492 )
+
+[node name="Coin7" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 733.802, -1284.17 )
+
+[node name="Coin8" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 219.888, -1722 )
+
+[node name="Coin9" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 859.277, -2187.86 )
+
+[node name="Coin10" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 392.083, -2771.19 )
+
+[node name="Coin11" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 616.336, -3042.16 )
+
+[node name="Coin12" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 315.997, -3465.3 )
+
+[node name="Coin16" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 541.832, -4519.47 )
+
+[node name="Coin17" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 543.246, -4431.79 )
+
+[node name="Coin18" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 546.075, -4335.63 )
+
+[node name="Coin19" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 546.075, -4266.33 )
+
+[node name="Coin13" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 649.707, -3462.63 )
+
+[node name="Coin14" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 648.372, -3383.88 )
+
+[node name="Coin15" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 313.327, -3299.78 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -6.058
+autoplay = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

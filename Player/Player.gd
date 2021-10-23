@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+onready var SM = $StateMachine
 
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
@@ -24,6 +24,7 @@ func _physics_process(_delta):
 		
 	if direction < 0 and not $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = true
 	if direction > 0 and $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = false
+	
 
 func set_direction(d):
 	direction = d

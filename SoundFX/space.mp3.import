@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/space.mp3-646428ab12771e8b7cbbb71f5ccb167d.mp3str"
+
+[deps]
+
+source_file="res://SoundFX/space.mp3"
+dest_files=[ "res://.import/space.mp3-646428ab12771e8b7cbbb71f5ccb167d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

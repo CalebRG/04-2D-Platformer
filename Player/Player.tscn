@@ -1,0 +1,135 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Player/Moving_and_Jumping.gd" type="Script" id=1]
+[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player/Jumping.gd" type="Script" id=3]
+[ext_resource path="res://Player/Idle.gd" type="Script" id=4]
+[ext_resource path="res://Player/Moving.gd" type="Script" id=5]
+[ext_resource path="res://Player/StateMachine.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Old hero.png" type="Texture" id=7]
+[ext_resource path="res://Player/Falling.gd" type="Script" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 480, 480, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 160, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 320, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 480, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 160, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 320, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 480, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 640, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 800, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 960, 320, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 800, 320, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": false,
+"name": "Jumping",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "Moving",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": false,
+"name": "Falling",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 4.83968, 15.0985 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
+position = Vector2( 2.65445, -61.4189 )
+scale = Vector2( 2.168, 2.168 )
+collision_layer = 4
+script = ExtResource( 2 )
+move_speed = 20
+max_move = 300
+max_jump = 1250
+leap_speed = 100
+max_leap = 1250
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1.467, 19.014 )
+scale = Vector2( 0.132, 0.132 )
+frames = SubResource( 12 )
+animation = "Moving"
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.80719, 20.0142 )
+scale = Vector2( 1, 0.545 )
+shape = SubResource( 13 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 4 )
+
+[node name="Moving" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )
+
+[node name="Jumping" type="Node" parent="StateMachine"]
+script = ExtResource( 3 )
+
+[node name="Falling" type="Node" parent="StateMachine"]
+script = ExtResource( 9 )
+
+[node name="Moving_and_Jumping" type="Node" parent="StateMachine"]
+script = ExtResource( 1 )
